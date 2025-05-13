@@ -1,0 +1,22 @@
+import React, { useState } from 'react';
+import Head from 'next/head';
+
+export default function TableLandingPage() {
+  const [name, setName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [location, setLocation] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => { // Add the type annotation here
+    e.preventDefault();
+    console.log({ name, phoneNumber, location });
+    setMessage('Asante kwa kuwasiliana nasi! Tutawasiliana nawe hivi karibuni.');
+    setName('');
+    setPhoneNumber('');
+    setLocation('');
+  };
+
+  return (
+    // ... your JSX code
+  );
+}
